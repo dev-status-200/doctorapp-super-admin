@@ -8,7 +8,7 @@ export function useUser() {
   return useContext(UserContext);
 }
 
-export const UserProvider = memo(({ children }) => {
+export const UserProvider = ({ children }) => {
   const [userData, setUserData] = useState(() => {
     const userString = Cookies.get("user");
     if (userString) {
@@ -57,6 +57,6 @@ export const UserProvider = memo(({ children }) => {
       {children}
     </UserContext.Provider>
   );
-});
+};
 
 export default UserProvider;
