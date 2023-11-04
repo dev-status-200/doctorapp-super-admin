@@ -1,0 +1,60 @@
+.canvas-container {
+  width: 350px;
+  height: 345px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.canvas-container canvas {
+  width: 100% !important;
+  height: auto;
+}
+
+.chart-header{
+    padding: 1rem 2.5rem;
+    border-bottom: solid;
+    border-width: 2px;
+    border-color: rgb(232, 228, 228);
+    display: flex;
+}
+
+.statistics-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+  
+    .title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+  
+    .dropdown-container {
+      display: flex;
+      border-radius: 10px !important;
+      align-items: center;
+      border: 1px solid #d9d9d9;
+      border-radius: 4px;
+      padding: 5px 10px;
+  
+      .dropdown-label {
+        color: #666;
+        margin-right: 10px;
+      }
+  
+      .dropdown-icon {
+        font-size: 0.9rem;
+        color: #999;
+      }
+    }
+  }
+
+  
+
+//BarChart Styles//
+.bar-container{
+  height: 345px;
+  margin: 0px auto;
+  padding-left: 35px
+}

@@ -1,0 +1,71 @@
+$gradient-start: rgb(54, 80, 165); // Lighter shade of orange
+$gradient-end: rgb(39, 41, 67); // Darker shade of orange
+
+.admin-panel {
+  display: flex !important;
+  flex: 1 !important;
+  margin: auto;
+  justify-content: center;
+  align-items: center !important;
+  min-height: 100vh;
+  background-color: white;
+  padding: 16px !important;
+  padding-top: 25px !important;
+  background-repeat: no-repeat;
+  background-size: cover !important;
+  background: radial-gradient(circle, $gradient-start 0%, $gradient-end 100%, $gradient-end 100%);
+}
+
+.admin-form {
+  padding: 30px;
+  justify-content: center;
+  align-items: center !important;
+  border-radius: 15px;
+  background-color: white !important;
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: rgb(83, 82, 82);
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 15px 0;
+    border: 0.5px solid #ece9e9;
+    border-radius: 10px;
+    outline: none;
+  }
+
+  button {
+    float: right;
+    width: 30%;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #cccccc;
+    color: #fff;
+    font-weight: 550;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      float: right;
+    width: 30%;
+    margin-top: 10px;
+    padding: 8px;
+    background-color: #e8e8e8;
+    color: #808080;
+    font-weight: 550;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    }
+  }
+}
+
