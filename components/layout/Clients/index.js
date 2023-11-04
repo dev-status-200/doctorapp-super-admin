@@ -5,7 +5,12 @@ import TableCom from "@/components/shared/Table/Table";
 import TableFooter from "@/components/shared/Table/TableFooter";
 import TableHeader from "@/components/shared/Table/TableHeader";
 
-const index = () => {
+import { useRouter } from 'next/router';
+
+const Clients = ({sessionData}) => {
+
+  const router = useRouter()
+
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const pageSize = 10;
@@ -87,6 +92,13 @@ const index = () => {
     getAllClients();
   }, [currentPage]);
 
+  
+  useEffect(() => {
+    if (!sessionData.isAuthorized) {
+      router.push("/");
+    } 
+  }, []);
+
   return (
     <div className="border rounded shadow m-5 p-5">
       <TableHeader
@@ -112,4 +124,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Clients;

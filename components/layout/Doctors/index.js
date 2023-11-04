@@ -1,11 +1,19 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
+import { useRouter } from 'next/router';
 import TableCom from "@/components/shared/Table/Table";
 import TableFooter from "@/components/shared/Table/TableFooter";
 import TableHeader from "@/components/shared/Table/TableHeader";
 
-const index = () => {
+const index = ({sessionData}) => {
+
+  const router = useRouter()
+  useEffect(() => {
+    if (!sessionData.isAuthorized) {
+      router.push("/");
+    } 
+  }, []);
+
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(0);
   const pageSize = 10;

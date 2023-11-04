@@ -1,22 +1,12 @@
-import React,{useEffect} from 'react'
+import React from 'react'
 import Cookies from 'cookies';
-import { useRouter } from 'next/router';
 
 import verifyToken from '@/apis/verifyToken'
 import Clients from '../components/layout/Clients/index'
 
 const clients = ({sessionData}) => {
-  const router = useRouter()
-    useEffect(() => {
-        if (!sessionData.isAuthorized) {
-          router.push("/");
-        } 
-      }, []);
-  return (
-    <React.Fragment>
-      <Clients/>
-    </React.Fragment>
-  )
+
+  return (<Clients sessionData={sessionData} />)
 }
 
 export default clients
