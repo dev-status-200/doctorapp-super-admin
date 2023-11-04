@@ -1,3 +1,4 @@
+"use client"
 import React from 'react';
 import { notification } from "antd";
 import { ExclamationCircleOutlined } from '@ant-design/icons';

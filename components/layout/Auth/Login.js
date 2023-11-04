@@ -1,3 +1,4 @@
+"use client"
 import React, { memo, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
@@ -10,7 +11,7 @@ import VectorArt from "../../../public/images/sheild.png";
 import Image from "next/image";
 
 const Login = ({sessionData}) => {
-  
+
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [loading, setLoading] = useState(false);

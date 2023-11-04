@@ -1,3 +1,4 @@
+"use client"
 import React, { memo, useState, useEffect } from "react";
 import moment from "moment";
 
