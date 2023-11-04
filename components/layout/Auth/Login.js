@@ -1,4 +1,4 @@
-import React, { memo, useState } from "react";
+import React, { memo, useState, useEffect } from "react";
 import axios from "axios";
 import Cookies from "js-cookie";
 import jwt_decode from "jwt-decode";
@@ -9,13 +9,19 @@ import { Spinner } from "react-bootstrap";
 import VectorArt from "../../../public/images/sheild.png";
 import Image from "next/image";
 
-const Login = () => {
+const Login = ({sessionData}) => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
   const [loading, setLoading] = useState(false);
 
   const router = useRouter();
+
+  useEffect(() => {
+    if (sessionData.isAuthorized) {
+      router.push("/dashboard");
+    }
+  }, [sessionData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();

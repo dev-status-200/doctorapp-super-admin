@@ -1,25 +1,14 @@
-import React, { Fragment, useEffect } from "react";
+import React, { Fragment } from "react";
 import Cookies from "cookies";
-import { useRouter } from "next/router";
+
 
 import Login from "@/components/layout/Auth/Login";
 import verifyToken from "@/apis/verifyToken";
 
 const auth = ({ sessionData }) => {
-  const router = useRouter();
-
-  useEffect(() => {
-    if (sessionData.isAuthorized) {
-      router.push("/dashboard");
-    } else {
-      return ;
-    }
-  }, []);
 
   return (
-    <React.Fragment>
-      <Login />
-    </React.Fragment>
+    <Login sessionData={sessionData} />
   );
 };
 
