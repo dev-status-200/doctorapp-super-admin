@@ -2,7 +2,7 @@ import React from "react";
 
 import { Row, Col } from "react-bootstrap";
 
-const index = () => {
+const Support = () => {
   return (
     <React.Fragment>
       <Row>
@@ -17,4 +17,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Support;

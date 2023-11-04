@@ -5,7 +5,7 @@ import TableCom from "@/components/shared/Table/Table";
 import TableFooter from "@/components/shared/Table/TableFooter";
 import TableHeader from "@/components/shared/Table/TableHeader";
 
-const index = ({sessionData}) => {
+const Doctors = ({sessionData}) => {
 
   const router = useRouter()
   useEffect(() => {
@@ -119,4 +119,4 @@ const index = ({sessionData}) => {
   );
 };
 
-export default index;
+export default Doctors;
